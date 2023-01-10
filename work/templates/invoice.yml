@@ -1,0 +1,16 @@
+issuer: Microsoft Regional Sales Corporation
+keywords:
+- Microsoft
+- M9-0002526-N
+exclude_keywords:
+- Already\s+paid
+- Do not pay
+fields:
+  amount: GrandTotal(\d+\.\d+)HKD
+  date: DocumentDate:(\d{1,2}\/\d{1,2}\/\d{4})
+  invoice_number: InvoiceNo.:(\w+)
+options:
+  remove_whitespace: true
+  currency: HKD
+  date_formats:
+    - '%d/%m/%Y'

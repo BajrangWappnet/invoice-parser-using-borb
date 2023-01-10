@@ -13,7 +13,7 @@ def main():
 
     d: typing.Optional[Document] = None
     l: SimpleTextExtraction = SimpleTextExtraction()
-    with open("Parser/data/lowes_bill_2.pdf", "rb") as pdf_in_handle:
+    with open("git/invoice-parser-using-borb/Parser/data/toasttab_bill.pdf", "rb") as pdf_in_handle:
         d = PDF.loads(pdf_in_handle, [l])
 
     assert d is not None
@@ -98,7 +98,7 @@ def main():
     item_list = quantity_search(input("enter the start: ").lower(), input("enter the End: ").lower())
 
     for i in item_list:
-        print(i, "hi")
+        print(i)
 
 
 
